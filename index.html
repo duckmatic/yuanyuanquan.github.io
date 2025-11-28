@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YuanYuan Quan - Ecologist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- CSS 样式表 --- */
+        :root {
+            --primary-color: #002d5a; /* 类似隆德大学的深蓝色 */
+            --accent-color: #8f9e8a;  /* 生态绿，代表 Ecology */
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --white: #ffffff;
+            --max-width: 900px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            background-color: var(--bg-color);
+        }
+
+        /* 排版设置 */
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif; /* 衬线体，学术感更强 */
+            color: var(--primary-color);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 20px;
+            background: var(--white);
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            min-height: 100vh;
+        }
+
+        /* 导航栏 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 40px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+
+        nav a {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* 个人简介区 (Hero Section) */
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
+        .profile-info h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+        }
+
+        .profile-title {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #555;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 通用版块样式 */
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* 研究关键词标签 */
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background-color: #eef2f5;
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* 论文列表 */
+        .publication-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pub-title {
+            font-weight: bold;
+            font-size: 1.05rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .pub-authors {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .pub-journal {
+            font-style: italic;
+            color: #002d5a;
+        }
+
+        /* 响应式适配：手机端 */
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <div style="font-weight: bold; font-size: 1.2rem; color: var(--primary-color);">Y. Quan</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="profile-section">
+        <img src="profile.jpg" alt="YuanYuan Quan" class="profile-img">
+        
+        <div class="profile-info">
+            <h1>YuanYuan Quan, Ph.D.</h1>
+            <div class="profile-title">
+                Ecologist | Researcher in Agroecology & Biodiversity<br>
+                <small>Lund University Alumni | Ph.D. in Environmental Science</small>
+            </div>
+            <p>
+                I am an ecologist specializing in biodiversity, ecosystem services, and plant-insect interactions in agricultural landscapes. My research explores how landscape composition influences ecosystem functioning.
+            </p>
+            
+            <div class="keywords">
+                <span class="tag">Agroecology</span>
+                <span class="tag">Biodiversity</span>
+                <span class="tag">Ecosystem Services</span>
+                <span class="tag">Landscape Ecology</span>
+            </div>
+
+            <div class="social-links">
+                <a href="mailto:yuanyuan.quan@cec.lu.se" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://scholar.google.com/citations?user=YOUR_USER_ID" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="#" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About My Research</h2>
+        <p>
+            My PhD project explored the impact of <strong>pollinator declines</strong> on plant community and ecosystem functioning from a landscape perspective. Specifically, I looked at different land-use intensities and how pollinators interact with other plant antagonists such as herbivores and seed predators.
+        </p>
+        <p>
+            I combine both manipulative and observational approaches with multi-year experiments in grassland systems (e.g., within Skåne province). My background includes a Bachelor's degree in Forestry and an MSc degree in Ecology.
+        </p>
+    </section>
+
+    <section id="publications">
+        <h2 class="section-title">Selected Publications</h2>
+        
+        <div class="publication-item">
+            <span class="pub-title">Landscape composition influences invertebrate herbivory on flowering forbs in semi-natural grasslands</span>
+            <div class="pub-authors"><strong>Quan, Y.</strong>, Hederström, V., Ekroos, J., et al. (2025)</div>
+            <div class="pub-journal">Basic and Applied Ecology, 85, 23-35</div>
+        </div>
+
+        <div class="publication-item">
+            <span class="pub-title">Diversity in insect responses to landscape composition drives flower visitation across semi-natural grassland plants</span>
+            <div class="pub-authors">Hederström, V., Krausl, T., <strong>Quan, Y.</strong>, et al. (2025)</div>
+            <div class="pub-journal">Agriculture, Ecosystems & Environment, 383, 109514</div>
+        </div>
+
+        <div class="publication-item">
+            <span class="pub-title">Landscape composition can influence reproductive success of plants in semi-natural grasslands depending on their pollinator dependence</span>
+            <div class="pub-authors">Krausl, T., Hederström, V., <strong>Quan, Y.</strong>, & Clough, Y. (2025)</div>
+            <div class="pub-journal">Biological Conservation, 308, 111220</div>
+        </div>
+
+        <div class="publication-item">
+            <span class="pub-title">Plant-insect interactions in grassland ecosystems: Assessing consequences of landscape change and environmental stressors</span>
+            <div class="pub-authors"><strong>Quan, Y.</strong> (2025)</div>
+            <div class="pub-journal">PhD Dissertation, Lund University</div>
+        </div>
+
+        <div class="publication-item">
+            <span class="pub-title">Pollinator-mediated effects of landscape-scale land use on grassland plant community composition and ecosystem functioning–seven hypotheses</span>
+            <div class="pub-authors">Hederström, V., Ekroos, J., ..., <strong>Quan, Y.</strong>, et al. (2024)</div>
+            <div class="pub-journal">Biological Reviews, 99(3), 675-698</div>
+        </div>
+        
+        <div style="margin-top: 20px;">
+            <a href="https://scholar.google.com/citations?user=YOUR_USER_ID" target="_blank">View full list on Google Scholar &rarr;</a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <p>I am open to research collaborations and postdoctoral opportunities.</p>
+        <p>
+            <i class="fas fa-envelope" style="color: var(--primary-color); margin-right: 8px;"></i> 
+            <strong>Email:</strong> yuanyuan.quan@cec.lu.se
+        </p>
+        <p>
+            <i class="fas fa-map-marker-alt" style="color: var(--primary-color); margin-right: 8px;"></i> 
+            <strong>Affiliation:</strong> Centre for Environmental and Climate Science (CEC), Lund University
+        </p>
+    </section>
+
+    <footer style="text-align: center; margin-top: 80px; color: #999; font-size: 0.8rem; border-top: 1px solid #eee; padding-top: 20px;">
+        &copy; 2025 YuanYuan Quan. All rights reserved.
+    </footer>
+</div>
+
+</body>
+</html>
